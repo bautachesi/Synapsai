@@ -1,0 +1,225 @@
+/* Variables */
+:root {
+    --primary-color: #21172e;
+    --secondary-color: #0e0816;
+    --tertiary-color: #FFFFFF;
+    --border-color: #444444;
+    --sidebar-bg: #140c1b;
+    --input-bg: #0a080e;
+    --light-gray: #2f2533;
+    --green-pastel: #8bc34a;
+    --red-pastel: #e91e63;
+}
+
+/* Importar Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-button {
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 0px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Main Content Styles */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.settings-menu {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.setting-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.setting-item label {
+    font-size: 1rem;
+    color: var(--tertiary-color);
+}
+
+/* Toggle Switch Styles */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--red-pastel);
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: var(--tertiary-color);
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--green-pastel);
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* Language Menu Styles */
+.language-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.language-button {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-button:hover {
+    background-color: var(--primary-color);
+}
+
+.language-dropdown {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    z-index: 1;
+    width: 100%;
+}
+
+.language-dropdown .language-option {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.language-dropdown .language-option:hover {
+    background-color: var(--primary-color);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--secondary-color);
+    border-top: 1px solid var(--border-color);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    margin-bottom: 25px;
+}
+
+.footer-logo img {
+    height: 60px;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+}
+
+.footer-link:hover {
+    color: var(--tertiary-color);
+    transform: translateY(-2px);
+}

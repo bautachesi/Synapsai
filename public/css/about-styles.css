@@ -1,0 +1,146 @@
+/* Variables */
+:root {
+    --primary-color: #21172e;
+    --secondary-color: #0e0816;
+    --tertiary-color: #FFFFFF;
+    --border-color: #444444;
+    --sidebar-bg: #140c1b;
+    --input-bg: #0a080e;
+    --light-gray: #2f2533;
+}
+
+/* Importar Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: var(--secondary-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-button {
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 0px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Main Content Styles */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    max-height: 900px;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+.about-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--tertiary-color);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--secondary-color);
+    border-top: 1px solid var(--border-color);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    margin-bottom: 25px;
+}
+
+.footer-logo img {
+    height: 60px;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    color: var(--light-gray);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+}
+
+.footer-link:hover {
+    color: var(--tertiary-color);
+    transform: translateY(-2px);
+}

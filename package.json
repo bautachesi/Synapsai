@@ -1,0 +1,17 @@
+{
+  "name": "synapsai",
+  "version": "1.0.0",
+  "description": "Synapsai Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Bautista Perez",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.21.2"
+  }
+}

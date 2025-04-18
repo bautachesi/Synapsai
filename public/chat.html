@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synapsai - Chat</title>
+    <link rel="stylesheet" href="chat-styles.css">
+    <link rel="shortcut icon" href="Synapsai-logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="Synapsai-text.png" alt="Synapsai Logo" class="sidebar-logo">
+            </div>
+            <button id="new-chat" class="new-chat-btn">+ New Chat</button>
+            <div class="chat-history">
+                <!-- Chat history will be populated dynamically -->
+            </div>
+        </div>
+        
+        <!-- Main Chat Area -->
+        <div class="main-area">
+            <div class="welcome-header">
+                <h1 id="welcome-message">¿How its your Day?</h1>
+            </div>
+            
+            <div class="chat-box">
+                <div id="chat-messages" class="chat-messages">
+                    <!-- Messages will appear here -->
+                </div>
+                
+                <div class="message-input-container">
+                    <input type="text" id="message-input" placeholder="Send message...">
+                    <button id="send-message" class="send-button">Send!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="chat-script.js"></script>
+</body>
+</html>
